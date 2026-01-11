@@ -29,8 +29,8 @@ module "datadog_monitor" {
 
     ## Using a common group email ensures consistent notifications, easier management, promotes team collaboration, and eliminates the need to update code when someone leaves the team.  
     critical_notify_oncall = "[@PagerDuty]" #Use datadog_integration_pagerduty to link on your notification for oncall.
-    critical_notify        = "@john.medilo@markthony.com" # Use MS Teams or Email to link your notification, ideally we should use group email instead of individual email.
-    warning_notify         = "@john.medilo@markthony.com" # Use datadog_integration_pagerduty to link your PagerDuty service.
+    critical_notify        = "@john.medilo@CompanyName.com" # Use MS Teams or Email to link your notification, ideally we should use group email instead of individual email.
+    warning_notify         = "@john.medilo@CompanyName.com" # Use datadog_integration_pagerduty to link your PagerDuty service.
 
     
     url_workspace = "https://github.com/CompanyNameGroup2/terraform-datadog-monitor/tree/v2/_common_aws_amazon_lambda_monitor"
