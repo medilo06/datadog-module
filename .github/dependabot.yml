@@ -1,0 +1,18 @@
+version: 2
+registries:
+  terraform-mag:
+    type: terraform-registry
+    url: https://app.terraform.io
+    token: ${{secrets.TF_REGISTRY_TOKEN}}
+updates:
+  - package-ecosystem: "terraform"
+    # Raise pull requests to update vendored dependencies that are checked in to the repository
+    directories:
+      - "/dev/"
+      - "/stg/"
+      - "/prod/"
+    registries: 
+      - terraform-opensource
+    schedule:
+      interval: "weekly"
+      day: "sunday"
